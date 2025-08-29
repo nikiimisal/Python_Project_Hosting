@@ -42,4 +42,12 @@ ls myenv
    cd ..
    python3 app.py
    add app2.py or remove app.py and added new app.py
+   python3 app.py
+   pip3 install mysql-connector-python
+   sudo yum install mariadb105-server
+   sudo service mariadb start
+   sudo mysql -u root -p
+
+   create database table
+   use table
    
