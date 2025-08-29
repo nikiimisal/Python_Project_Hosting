@@ -1,8 +1,8 @@
 # Python_Project_Hosting
 
 <h1> Prerequisites</h1>
-Before starting this journey, I ensured I had :
-
+Before starting this journey, I ensured I had :<br>
+<br>
 • An AWS EC2 instance running <br>
 • Basic knowledge of Linux commands<br>
 • A MEAN stack application ready for deployment<br>
@@ -30,8 +30,7 @@ This verifies which version of Python 3 is installed, ensuring compatibility w
 These commands install pip (for package management) and virtualenv (for creating isolated Python environments).
 >>PIP : pip is a python package manager (a recursive acronym for “Pip Installs Packages”) is the standard package installer for Python, designed to help you easily install, manage, and organize libraries that aren't part of the standard library.<br>
 >> Virtualenv : In two separate directories, virtual environments keep projects clean and organized. As a result, there are no interdependencies between the projects.
-
->>• Isolates project dependencies<br>
+• Isolates project dependencies<br>
 • Prevents version clashes and system conflicts<br>
 • Enables consistent, reproducible setups across development environments<br>
 
