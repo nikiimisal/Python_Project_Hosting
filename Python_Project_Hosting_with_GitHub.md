@@ -9,7 +9,8 @@ Before starting this journey, I ensured I had:
 Ensure that ports 5000 or 8501 are open in the security group.
 
 <h1>Install the software related(necessary) to your project … just as listed below</h1>
-   >>If you want to install and use Nginx with a proxy_pass, that’s a great approach. I’ve created these notes just for practice. So if you’d like to use that method, you can proceed with adding this process.
+
+  >>If you want to install and use Nginx with a proxy_pass, that’s a great approach. I’ve created these notes just for practice. So if you’d like to use that method, you can proceed with adding this process...i.e adding MariaDB, etc.
    
     sudo yum update
  Make shure install git,Because we have go to clone the repo.
@@ -57,7 +58,7 @@ If you want the website to keep running even after closing the Linux (or PowerSh
     Kill 123(PID)
   
   
-     
+   <h1>I followed the steps based on a video reference… but these processes may change in the future… so stay up to date.😊</h1>
 
      
 
