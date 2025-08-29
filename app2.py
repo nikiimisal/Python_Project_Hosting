@@ -8,12 +8,12 @@ def get_db_connection():
         host="localhost",
         user="root",
         password="root",
-        database="table"
+        database="nikhil"
     )
 
 @app.route('/')
 def index():
-    return render_template('form.html')
+    return render_template('forms.html')
 
 @app.route('/register', methods=['POST'])
 def register():
