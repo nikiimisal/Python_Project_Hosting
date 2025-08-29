@@ -84,6 +84,8 @@ Nginx Installation & Configuration :
 
      sudo yum install nginx
      sudo service nginx start
+     sudo systemctl enable nginx
+
    If you want to proxy_pass port 5000 to 80
    >>I prefer this setup because the Python development server running on port 5000 occasionally fails under heavy request loads
 
@@ -102,47 +104,34 @@ Nginx Installation & Configuration :
       mkdir templates
       cd templates
       sudo nano forms.html
-   • I have provided the code file in the repository— view them there and copy-paste as needed.<br>
-      
+• I have provided the code file in the repository— view them there and copy-paste as needed.<br><br>
+Setting Up MariaDB :<br><br>
+
+To manage your application's data, you installed MariaDB, a popular relational database management system:
+
+    sudo yum install mariadb105-server
+
+
+After installation, you started the MariaDB service:
+
+    sudo service mariadb start
+You then logged into the MariaDB shell:
+
+    sudo mysql -u root -p
+    CREATE DATABASE nikhil;
+    
+  Back to the folder where your app.py file avalible
+  
       cd ..
       python3 app.py
 
+. Deploying the Flask Application with Gunicorn and Nginx<br><br>
 
-python3 -V
-sudo yum install python3-pip -y
-sudo yum install python3-virtualenv -y
-mkdir pythonapp
-cd pythonapp/
-source myenv/bin/activate
-python3 -m venv myenv
-ls
-ls myenv
- sudo nano requirements.txt
- sudo nano app.py
-  pip install -r requirements.txt
-  python3 app.py
+To deploy your Flask application in a production environment, you utilized Gunicorn, a Python WSGI HTTP server:
 
-  Until now, we had been running it in the foreground; from now on, it will run in the background
+      pip3 install gunicorn
+You then started the Gunicorn server:
 
-  gunicorn --bind 0.0.0.0:5000 app:app --daemon
+    gunicorn --bind 0.0.0.0:5000 app:app --daemon
 
-  sudo yum install nginx
-  sudo service nginx start
-   sudo nano /etc/nginx/nginx.conf
-   sudo service nginx reload
 
-   mkdir templates
-   cd templates
-   sudo nano form.html
-   cd ..
-   python3 app.py
-   add app2.py or remove app.py and added new app.py
-   python3 app.py
-   pip3 install mysql-connector-python
-   sudo yum install mariadb105-server
-   sudo service mariadb start
-   sudo mysql -u root -p
-
-   create database table
-   use table
-   
