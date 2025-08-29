@@ -18,6 +18,7 @@ sudo yum install python3-pip -y
 sudo yum install python3-virtualenv -y
 mkdir pythonapp
 cd pythonapp/
+source myenv/bin/activate
 python3 -m venv myenv
 ls
 ls myenv
@@ -34,3 +35,10 @@ ls myenv
   sudo service nginx start
    sudo nano /etc/nginx/nginx.conf
    sudo service nginx reload
+
+   mkdir templates
+   cd templates
+   sudo nano form.html
+   cd ..
+   python3 app.py
+   
