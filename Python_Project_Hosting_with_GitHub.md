@@ -1,4 +1,4 @@
- <h1>Prerequisites</
+ <h1>Prerequisites</h1>
 Before starting this journey, I ensured I had:
 
 • An AWS EC2 instance running 
@@ -9,7 +9,8 @@ Before starting this journey, I ensured I had:
 Ensure that ports 5000 or 8501 are open in the security group.
 
 <h1>Install the software related(necessary) to your project … just as listed below</h1>
-
+   >>If you want to install and use Nginx with a proxy_pass, that’s a great approach. I’ve created these notes just for practice. So if you’d like to use that method, you can proceed with adding this process.
+   
     sudo yum update
  Make shure install git,Because we have go to clone the repo.
  
