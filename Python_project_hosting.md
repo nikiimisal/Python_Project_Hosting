@@ -29,7 +29,7 @@ This verifies which version of Python 3 is installed, ensuring compatibility w
         sudo yum install python3-virtualenv -y
 These commands install pip (for package management) and virtualenv (for creating isolated Python environments).
 >>PIP : pip is a python package manager (a recursive acronym for “Pip Installs Packages”) is the standard package installer for Python, designed to help you easily install, manage, and organize libraries that aren't part of the standard library.<br>
->> Virtualenv : In two separate directories, virtual environments keep projects clean and organized. As a result, there are no interdependencies between the projects.
+>> Virtualenv : In two separate directories, virtual environments keep projects clean and organized. As a result, there are no interdependencies between the projects.<br>
 • Isolates project dependencies<br>
 • Prevents version clashes and system conflicts<br>
 • Enables consistent, reproducible setups across development environments<br>
@@ -67,11 +67,10 @@ Create and enter the pythonapp directory where your project will reside.<br>
        pip install -r requirements.txt
        python3 app.py
    Install dependencies and run the application directly—in the current terminal (i.e., in the foreground).
-8. Transition from Foreground to Background
-   
-Until now, we had been running it in the foreground; from now on, it will run in the background.<br>
-or<br>
-This highlights that previously the application was started in the active terminal, but now you'll shift it to run independently of the terminal.<br>
+8. Transition from Foreground to Background <br>  
+       Until now, we had been running it in the foreground; from now on, it will run in the background.<br>
+       or<br>
+       This highlights that previously the application was started in the active terminal, but now you'll shift it to run independently of the terminal.<br>
 
 9. Run Gunicorn as a Background Daemon
     
