@@ -68,9 +68,9 @@ Create and enter the pythonapp directory where your project will reside.<br>
        python3 app.py
    Install dependencies and run the application directly—in the current terminal (i.e., in the foreground).
 8. Transition from Foreground to Background <br>  
-       Until now, we had been running it in the foreground; from now on, it will run in the background.<br>
-       or<br>
-       This highlights that previously the application was started in the active terminal, but now you'll shift it to run independently of the terminal.<br>
+         Until now, we had been running it in the foreground; from now on, it will run in the background.<br>
+         or<br>
+         This highlights that previously the application was started in the active terminal, but now you'll shift it to run independently of the terminal.<br>
 
 9. Run Gunicorn as a Background Daemon
     
@@ -78,8 +78,34 @@ Create and enter the pythonapp directory where your project will reside.<br>
 
 
 
+<h1>From here onward, let's proceed to host a basic project</h1>
 
+Nginx Installation & Configuration :
 
+     sudo yum install nginx
+     sudo service nginx start
+   If you want to proxy_pass port 5000 to 80
+   >>I prefer this setup because the Python development server running on port 5000 occasionally fails under heavy request loads
+
+     sudo nano /etc/nginx/nginx.conf
+ <br>
+ 
+         location / {
+         proxy_pass http://localhost:8000;
+         }
+   <br>      
+    
+     sudo service nginx reload
+
+ Project Structure Setup :
+ 
+      mkdir templates
+      cd templates
+      sudo nano forms.html
+   • I have provided the code file in the repository— view them there and copy-paste as needed.<br>
+      
+      cd ..
+      python3 app.py
 
 
 python3 -V
