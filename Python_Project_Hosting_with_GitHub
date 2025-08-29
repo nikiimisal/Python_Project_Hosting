@@ -1,0 +1,32 @@
+ <h1>Prerequisites</
+Before starting this journey, I ensured I had:
+
+• An AWS EC2 instance running Ubuntu
+• Basic knowledge of Linux commands
+• A Python Project ready for deployment
+
+>>Personal Note: Setting up the EC2 instance was straightforward, but I recommend thoroughly understanding AWS security groups and network settings before proceeding.
+Ensure that ports 5000 or 8501 are open in the security group.
+
+<h1>Install the software related(necessary) to your project … just as listed below</h1>
+
+      sudo yum update
+    sudo yum install git -y
+    sudo yum install nginx 
+    sudo yum install mariadb105-server
+    python3 -V
+   if not download it
+   pip3 -V
+    if not download it
+    sudo yum install python3-pip -y
+
+   python3 -m pip
+
+
+cd InNews/
+python3 -m pip install -r requriments.txt
+python3 -m streamlit run App.py
+
+
+
+git clone https://github.com/Spidy20/InNews.git
