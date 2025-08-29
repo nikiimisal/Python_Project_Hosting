@@ -121,6 +121,13 @@ You then logged into the MariaDB shell:
     CREATE DATABASE nikhil;
     
   Back to the folder where your app.py file avalible
+  The file should be linked to the appropriate HTML folder
+
+        your-app/
+        ├── app.py
+        ├── templates
+        │   └── form.html
+<br>
   
       cd ..
       python3 app.py
