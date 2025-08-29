@@ -3,10 +3,6 @@ import os
 app = Flask(__name__)
 
 @app.route('/')
-def nik():
-  return render_template('form.html')
-
-@app.route('/')
 def hello_geek():
     return 'Python App Hosting jhala'
 @app.route('/hi')
