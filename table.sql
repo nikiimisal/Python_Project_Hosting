@@ -1,6 +1,6 @@
-CREATE DATABASE table;
+create database nikhil;
 
-USE table;
+use nikhil;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
