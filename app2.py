@@ -1,18 +1,21 @@
-from flask import Flask, render_template, request, redirect, url_for
+
+from flask import Flask, request, render_template
 import mysql.connector
 
 app = Flask(__name__)
 
-def get_db_connection():
-    return mysql.connector.connect(
+#  MySQL connection
+
+    db = mysql.connector.connect(
         host="localhost",
         user="root",
         password="root",
         database="nikhil"
     )
+    cursor = db.cursor()
 
 @app.route('/')
-def index():
+def home():
     return render_template('forms.html')
 
 @app.route('/register', methods=['POST'])
@@ -21,15 +24,11 @@ def register():
     email = request.form['email']
     password = request.form['password']
 
-    conn = get_db_connection()
-    cursor = conn.cursor()
     sql = "INSERT INTO users (name, email, password) VALUES (%s, %s, %s)"
     cursor.execute(sql, (name, email, password))
-    conn.commit()
-    cursor.close()
-    conn.close()
+    db.commit()
 
-    return redirect(url_for('index'))
+    return f"User {name} registered successfully!"
 
 if __name__ == '__main__':
     app.run(debug=True)
