@@ -8,7 +8,7 @@ Before starting this journey, I ensured I had:
 • A MEAN stack application ready for deployment
 
 >>Personal Note: Setting up the EC2 instance was straightforward, but I recommend thoroughly understanding AWS security groups and network settings before proceeding.<br>
-Ensure that ports 5000 and 27017 are open in the security group.
+Ensure that reliable ports open in the security group.
 
 <h1>Setteping infrastructure of project</h1>
 
@@ -28,10 +28,10 @@ This verifies which version of Python 3 is installed, ensuring compatibility w
         sudo yum install python3-pip -y
         sudo yum install python3-virtualenv -y
 These commands install pip (for package management) and virtualenv (for creating isolated Python environments).
->>PIP:pip is a python package manager (a recursive acronym for “Pip Installs Packages”) is the standard package installer for Python, designed to help you easily install, manage, and organize libraries that aren't part of the standard library.<br>
+>>PIP : pip is a python package manager (a recursive acronym for “Pip Installs Packages”) is the standard package installer for Python, designed to help you easily install, manage, and organize libraries that aren't part of the standard library.<br>
 >> Virtualenv : In two separate directories, virtual environments keep projects clean and organized. As a result, there are no interdependencies between the projects.
 
-• Isolates project dependencies
+>>• Isolates project dependencies
 • Prevents version clashes and system conflicts
 • Enables consistent, reproducible setups across development environments
 
